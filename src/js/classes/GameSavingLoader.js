@@ -5,7 +5,7 @@ import GameSaving from './GameSaving';
 class GameSavingLoader {
   static load() {
     return new Promise((resolve, reject) => {
-      (async () => {
+      async () => {
         try {
           const data = await await read();
           const response = await json(data);
@@ -14,7 +14,7 @@ class GameSavingLoader {
         } catch (e) {
           reject(e);
         }
-      })();
+      };
     // return read().then((e) => json(e).then((p) => p));
     });
   }
